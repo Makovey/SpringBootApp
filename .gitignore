@@ -1,1 +1,4 @@
 .idea
+
+#password from DB
+!/src/main/resources/application.properties
