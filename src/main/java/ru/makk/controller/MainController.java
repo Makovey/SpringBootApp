@@ -1,4 +1,4 @@
-package ru.makk;
+package ru.makk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,17 +12,17 @@ import ru.makk.repositories.MessageRepo;
 import java.util.Map;
 
 @Controller
-public class GETContoroller {
+public class MainController {
     @Autowired
     private MessageRepo messageRepo;
 
-    @GetMapping("/greetings")
+    @GetMapping("/")
     public String greetings(@RequestParam(name = "name", defaultValue = "World", required = false) String name, Model model) {
         model.addAttribute("name", name);
         return "greetings";
     }
 
-    @GetMapping
+    @GetMapping("/main")
     public String main(Map<String, Object> model) {
         Iterable<Message> messages = messageRepo.findAll();
         model.put("messages", messages);
