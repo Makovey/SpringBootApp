@@ -5,6 +5,7 @@
     <div>
         <h2>LOGOUT</h2>
         <@l.logout/>
+        <span><a href="/user">User list</a></span>
         <h2>Создать новое сообщение</h2>
         <form action="/" method="POST">
             <input type="text" name="text" placeholder="Type your message">

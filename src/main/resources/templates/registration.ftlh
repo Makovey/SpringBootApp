@@ -3,7 +3,7 @@
 
 <@c.page>
     <h1>Registration</h1>
-    ${message}
+    ${message!}
     <@l.login "/registration" />
     <a href="/login">Login</a>
 </@c.page>
